@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>MiniMaxi Market</title>
+</head>
+<body>
+	<div align="center">
+		<h1>MiniMaxi Market</h1>
+		<a href="new">Unesi novi proizvod</a> <br></br>
+		<table border="1" cellpadding="10">
+			<thead>
+				<tr>
+					<th>Proizvod ID</th>
+					<th>Naziv</th>
+					<th>Proizvodjac</th>
+					<th>Barkod</th>
+					<th>Cena</th>
+					<th>Stanje</th>
+					<th>Dobavljac</th>
+					<th>Promena</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="proizvod: ${listProducts}">
+					<td th:text="${proizvod.id}">Proizvod ID</td>
+					<td th:text="${proizvod.naziv}">Naziv</td>
+					<td th:text="${proizvod.proizvodjac}">Proizvodac</td>
+					<td th:text="${proizvod.barkod}">Barkod</td>
+					<td th:text="${proizvod.cena}">Cena</td>
+					<td th:text="${proizvod.stanje}">Stanje</td>
+					<td th:text="${proizvod.dobavljac}">Dobavljac</td>
+					<td>
+						<a th:href="@{'/edit/' + ${proizvod.id}}">Uredi</a>
+						<a th:href="@{'/delete/' + ${proizvod.id}}">Obrisi</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

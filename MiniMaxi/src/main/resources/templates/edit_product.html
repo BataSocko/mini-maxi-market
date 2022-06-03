@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Zamena podataka proizvoda</title>
+</head>
+<body>
+	<div align="center">
+		<h1>Zamena podataka proizvoda</h1>
+		<br />
+		<form action="#" th:action="@{/save}" th:object="${proizvod}" method="post">
+			<table border="0" cellpadding="10">
+				<tr>
+				<td>Proizvod ID:</td>
+					<td><input type="text" th:field="*{id}" readonly="readonly"/></td>
+				</tr>
+					<td>Naziv:</td>
+					<td><input type="text" th:field="*{naziv}"/></td>
+				</tr>
+				<tr>
+					<td>Proizvodjac:</td>
+					<td><input type="text" th:field="*{proizvodjac}" /></td>
+				</tr>
+				<tr>
+					<td>Barkod:</td>
+					<td><input type="text" th:field="*{barkod}" /></td>
+				</tr>
+				<tr>
+					<td>Cena:</td>
+					<td><input type="text" th:field="*{cena}" /></td>
+				</tr>
+				<tr>
+					<td>Stanje:</td>
+					<td><input type="text" th:field="*{stanje}" /></td>
+				</tr>
+				<tr>
+					<td>Dobavljac:</td>
+					<td><input type="text" th:field="*{dobavljac}" /></td>
+				</tr>
+				
+				<tr>
+				<button type="submit">Sacuvaj</button>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
