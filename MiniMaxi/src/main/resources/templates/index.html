@@ -30,10 +30,8 @@
 					<td th:text="${proizvod.cena}">Cena</td>
 					<td th:text="${proizvod.stanje}">Stanje</td>
 					<td th:text="${proizvod.dobavljac}">Dobavljac</td>
-					<td>
-						<a th:href="@{'/edit/' + ${proizvod.id}}">Uredi</a>
-						<a th:href="@{'/delete/' + ${proizvod.id}}">Obrisi</a>
-					</td>
+					<td><a th:href="@{'/edit/' + ${proizvod.id}}">Uredi</a> <a
+						th:href="@{'/delete/' + ${proizvod.id}}">Obrisi</a></td>
 				</tr>
 			</tbody>
 		</table>
